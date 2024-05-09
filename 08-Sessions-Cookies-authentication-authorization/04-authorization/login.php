@@ -41,9 +41,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
       $_SESSION['user']=[
         'id' => $user['id'],
         'username' => $user['username'],
+        'role' => $user['role']
       ];
       $_SESSION['loggedIn']=true;
-      header('Location: profile.php');
+      
+      //redirect user case role
+      if($_SESSION['user']['role']==='ADMIN')
+      {
+        header('Location: admin-dashboard.php');
+
+      }else{//USER
+        header('Location: profile.php');
+
+      }
+      
       exit;
          
     }
