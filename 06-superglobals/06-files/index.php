@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
 
     // Check and create dir
     if (!is_dir($uploadDir)) {
-      mkdir($uploadDir, 0755, true);
+      mkdir($uploadDir, true);
     }
 
     // Create file name
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
         </div>
         <div class="flex items-center justify-between">
           <button type="submit" name="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none">
-            Create Listing
+            Create Job
           </button>
           <a href="#" class="text-blue-500 hover:underline">Back to Listings</a>
         </div>
