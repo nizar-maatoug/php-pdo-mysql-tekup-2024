@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS demo_authorization_db;
-USE demo_authorization_db;
+CREATE DATABASE IF NOT EXISTS demo_auth_db;
+USE demo_auth_db;
 
 
 CREATE TABLE users(
